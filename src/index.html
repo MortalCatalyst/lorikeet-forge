@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+
+  <body>
+    <template id="item-template">
+      <div class="item">
+        <img class="icon" />
+        <div class="filename"></div>
+      </div>
+    </template>
+    <div id="toolbar">
+      <div id="current-folder">
+        <script>
+        document.write(require('osenv').home());
+      </script>
+      </div>
+    </div>
+    <div id="main-area"></div>
+  </body>
+
+</html>
