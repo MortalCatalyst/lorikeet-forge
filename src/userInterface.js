@@ -50,4 +50,7 @@ function bindDocument(window) {
         document = window.document;
     }
 }
-module.exports = { bindDocument, displayFiles, loadDirectory };
+function bindSearchField(cb) {
+    document.getElementById('search').addEventListener('keyup', cb, false);
+}
+module.exports = { bindDocument, displayFiles, loadDirectory, bindSearchField };
